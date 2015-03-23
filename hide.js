@@ -7,7 +7,8 @@
             }
         },
         runOnAllTagsOfType = function( tagName, func ) {
-            if( var els = document.getElementsByTagName( tagName ); ) {
+            var els = document.getElementsByTagName( tagName );
+            if( els ) {
                 for (var i = els.length - 1; i >= 0 ; i-- ) {
                     func.call( undefined, els[ i ] );
                 }
